@@ -20,6 +20,7 @@ app.get('/items', function(req, res) {
         }
         res.json(items);
     });
+    .done();
 });
 
 app.post('/items',  function(req, res) {
@@ -33,6 +34,7 @@ app.post('/items',  function(req, res) {
         }
         res.status(201).json(item);
     });
+    .done();
 });
 
 app.put('/items/:id', function(req, res) {
@@ -53,6 +55,7 @@ app.put('/items/:id', function(req, res) {
         }
         res.status(200).json(item);
     });
+    .done();
 });
 
 app.delete('/items/:id', function(req, res) {
@@ -69,6 +72,7 @@ app.delete('/items/:id', function(req, res) {
         }
         res.status(200).json({_id: req.params.id});
     });
+    .done();
 });
 
 app.use('*', function(req, res) {
